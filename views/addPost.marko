@@ -1,0 +1,22 @@
+<form  method = "post" action = "/add/post">
+	<label for="postTitle"><p> Title:</p></label>
+	<input type = "text" name = "postTitle" id = "postTitle">
+
+	<label for="postCategory"><p>Category:</p></label>
+	<select name = "postCategory"  id="postCategory">
+		<for (category in input.categories)>
+			<option value=category.category > ${category.category}</option>
+		</for>
+	</select>
+
+	<label for="postBody"><p>Body:</p></label>
+	<textarea name= "postBody" id = "postBody"></textarea>
+
+<!-- 	<label for="mainImage"><p>Main Image:</p></label>
+	<input type ="file" name= "mainImage" id = "mainImage"> -->
+
+	<label for="postAuthor"><p>Author Name:</p></label>
+	<input type="text" name = "postAuthor" id = "postAuthor">
+
+	<input type="submit" value="save">
+</form>

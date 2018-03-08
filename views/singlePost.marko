@@ -1,0 +1,39 @@
+$ var blogPost = input.posts;
+<div class="singlePost">
+	<h3>${blogPost.postTitle}</h3>
+	<div class = "singlePostBody" >
+		$ var href = `/show/${blogPost.postCategory}`
+		<p>By ${blogPost.postAuthor} in <a href=href>${blogPost.postCategory}</a></p>
+		<div>
+			<p>${blogPost.postBody}</p>
+		</div>
+	</div>
+</div>
+
+<if(blogPost.postComment.length >0)>
+	<for(singlePostComment in blogPost.postComment)>
+		<div class="showCommentSection">
+			${singlePostComment.commentatorName}
+				<h5>By ${singlePostComment.commentatorName} having ${singlePostComment.commentatorEmail}</h5>
+			<div class = "commentBody" >
+				<p>${singlePostComment.commentatorComment}</p>
+			</div>
+		</div>
+	</for>
+</if>
+
+<div class="postCommentSection">
+	$ var href = `/post/comment/${blogPost._id}`;
+	<form  method = "post" action = href>
+		<label for="commentatorName"><p> Name:</p></label>
+		<input type = "text" name = "commentatorName" id = "commentatorName">
+
+		<label for="commentatorEmail"><p> Email:</p></label>
+		<input type = "text" name = "commentatorEmail" id = "commentatorEmail">
+
+		<label for="commentatorComment"><p>Comment:</p></label>
+		<textarea name= "commentatorComment" id = "commentatorComment"></textarea>
+
+		<input type="submit" value="Post Comment">
+	</form>
+</div>

@@ -1,0 +1,56 @@
+a {
+  text-decoration: none;
+}
+
+.header-nav-container{
+	background: black;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.header-nav{
+	display: flex;
+	flex-direction: row;    
+
+}
+
+.container{
+	border : solid 1px gray;
+	border-radius: 3px;
+	padding:20px;
+	width: 70vw;
+	margin: 20px auto;
+	overflow: auto;
+}
+
+.logoContainer{
+	text-align: center;
+}
+
+.logo{
+	width : 50%;
+}
+
+.singlePost{
+
+}
+
+.singlePostBody{
+
+}
+
+.nav-item{
+	margin: 0px 20px 0px 0px;
+	list-style-type: none;
+}
+
+input{
+	padding: 5px;
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+a:class{
+	color: white;
+}

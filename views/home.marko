@@ -1,0 +1,15 @@
+<for (blogPost in input.posts)>
+	$ var href = `show/single/${blogPost.id}`;
+	<a href=href>
+		<div class="singlePost">
+			<h3>${blogPost.postTitle}</h3>
+			<div class = "singlePostBody" >
+				$ var href = `/show/category/${blogPost.postCategory}`
+				<p>By ${blogPost.postAuthor} in <a href=href>${blogPost.postCategory}</a></p>
+				<div>
+					<p>${blogPost.postBody}</p>
+				</div>
+			</div>
+		</div>
+	</a>
+</for>

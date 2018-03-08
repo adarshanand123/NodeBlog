@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+	<title>Node Auth</title>
+</head>
+<body>
+	<div class = "container">
+		<header-tag title = input.title/>
+	  	$ var filePath = require(input.filename);
+	  	$ var {categories,posts} = input;
+		<include(filePath, {categories : categories, posts : posts})/>
+		<footer-tag/>
+	</div>
+</body>
+	<script type="text/javascript" src="/javascripts/bootstrap.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<if(input.filename == './addPost.marko')>
+		<script src="/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript"> CKEDITOR.replace('postBody');</script>
+	</if>
+</html>
